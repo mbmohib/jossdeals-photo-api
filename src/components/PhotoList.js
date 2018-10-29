@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Fade from '@material-ui/core/Fade';
-import Paper from '@material-ui/core/Paper';
-import { withStyles } from '@material-ui/core/styles';
 import fetchData from '../api/fetchData';
 import Photo from './Photo';
-import Title from './styled/Title';
+import Message from './Message';
 
 const PhotolistWrapper = styled.div`
     background: ${props => props.theme.primaryColor};
@@ -19,14 +17,6 @@ const PhotolistWrapper = styled.div`
     align-items: center;
     width: 100%;
 `;
-
-const Message = withStyles({
-    root : {
-        padding: '30px',
-        color: '#721c24',
-        backgroundColor: '#f8d7da'
-    }
-})(Paper)
 
 class PhotoList extends React.Component {
 
@@ -87,23 +77,32 @@ class PhotoList extends React.Component {
                 {/* Show Error message for api request error */}
                 {
                     this.state.error && 
-                    <Message elevation={2}>
-                        <Title>
-                            Something went wrong! Please reload the page.
-                        </Title>
+                    <Message
+                        error
+                        text="Something went wrong! Please reload the page."
+                    >
+                    </Message>
+                }
+
+                {/* Show message when search not matched */}
+                {
+                    this.state.searchedPhotos && this.state.searchedPhotos.length <= 0 && 
+                    <Message
+                        text="Sorry! No matches found."
+                    >
                     </Message>
                 }
 
                 {/* Show Loading state while data on the way */}
                 <Fade
-                    in={!this.state.searchedPhotos && !this.state.error}
+                    in={!this.state.photos && !this.state.error}
                     unmountOnExit
                 >
                     <CircularProgress color="secondary" size={80} thickness={1}/>
                 </Fade>
                 
                 {
-                    this.state.searchedPhotos && 
+                    this.state.searchedPhotos && this.state.searchedPhotos.length > 0 &&
                     <Grid container spacing={16}>
 
                         {
