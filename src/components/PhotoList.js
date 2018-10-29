@@ -25,16 +25,52 @@ class PhotoList extends React.Component {
         return (
             <PhotolistWrapper>
                 <Grid container spacing={16}>
-                    <Grid item sm ={6} md={4} xl={3}>
+                    <Grid item sm ={6} md={3} xl={2}>
                         <Photo />
                     </Grid>
-                    <Grid item sm ={6} md={4} xl={3}>
+                    <Grid item sm ={6} md={3} xl={2}>
                         <Photo />
                     </Grid>
-                    <Grid item sm ={6} md={4} xl={3}>
+                    <Grid item sm ={6} md={3} xl={2}>
                         <Photo />
                     </Grid>
-                    <Grid item sm ={6} md={4} xl={3}>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
+                        <Photo />
+                    </Grid>
+                    <Grid item sm ={6} md={3} xl={2}>
                         <Photo />
                     </Grid>
                 </Grid>

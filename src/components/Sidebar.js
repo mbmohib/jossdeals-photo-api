@@ -10,7 +10,7 @@ const SidebarWrapper = styled.div`
     width: 100%;
     background-color: ${props => props.theme.primaryColor};
     height: 100%;
-    padding: 20px;
+    padding: 20px 40px 20px 20px;
 `
 
 const CategoryItem = withStyles({
