@@ -12,11 +12,11 @@ const Container = styled.div`
         width: 750px;
     `}
 
-    ${media.smallLaptop`
+    ${media.laptop`
         width: 970px;
     `}
 
-    ${media.laptop`
+    ${media.desktop`
         width: 1170px;
     `}
 `

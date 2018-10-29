@@ -2,11 +2,10 @@ import { css }from 'styled-components'
 
 const sizes = {
     mobile: '360',
-    fablet: '410',
-    tablet: '768',
-    smallLaptop: '992',
-    laptop: '1200',
-    desktop: '1400'
+    tablet: '600',
+    laptop: '960',
+    desktop: '1280',
+    largeDesktop: '1920'
 };
 
 const media = Object.keys(sizes).reduce((accumulator, label) => {
