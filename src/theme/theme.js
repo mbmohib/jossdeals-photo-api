@@ -6,7 +6,7 @@ export default {
     linkColor: '#0056b3',
     fontColor: 'rgba(0, 0, 0, 0.87)',
 
-    // normalFont: `'MSReference';`,
+    normalFont: `'Roboto', sans-serif;`,
 
     lightWeight: '300',
     normalWeight: '400',

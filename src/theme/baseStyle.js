@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 const BaseStyle = createGlobalStyle`
 
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
     body {
         font-family: ${props => props.theme.normalFont};
     }
