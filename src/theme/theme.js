@@ -1,13 +1,12 @@
 export default {
-    primaryColor: '#3f51b5',
-    secondaryColor: '#edeef3',
+    primaryColor: '#C9D3DF',
+    secondaryColor: '#000000',
     greyColorOne: 'hsl(200, 25%, 96%)',
     greyColorTwo: 'hsl(200, 25%, 88%)',
     linkColor: '#0056b3',
     fontColor: 'rgba(0, 0, 0, 0.87)',
 
-    titleFont: `'Josefin Sans', sans-serif;`,
-    normalFont: `'Roboto', sans-serif;`,
+    // normalFont: `'MSReference';`,
 
     lightWeight: '300',
     normalWeight: '400',

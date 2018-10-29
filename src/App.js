@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import GlobalStyle from './theme/globalStyle';
+import Header from './components/Header';
+import Content from './components/Content';
 
 class App extends Component {
     render() {
         return (
             <GlobalStyle>
-                <p>Hello From Home!</p>
+                <Header />
+                <Content />
             </GlobalStyle>
         )
     }

@@ -7,11 +7,13 @@ import red from '@material-ui/core/colors/red';
 const materialTheme = createMuiTheme({
   palette: {
     primary: {
-        main: '#ff4400',
+        main: '#C9D3DF',
         dark: '#880E4F', //Hover Color
         contrastText: '#EDE7F6', //Text Color
     },
-    secondary: pink,
+    secondary: {
+        main: '#000000',
+    },
     error: red,
     // Used by `getContrastText()` to maximize the contrast between the background and
     // the text.
