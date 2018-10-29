@@ -107,7 +107,7 @@ class PhotoList extends React.Component {
 
                         {
                             this.state.searchedPhotos.map( photo => (
-                                <Grid key={photo.id} item sm ={6} md={4} xl={2}>
+                                <Grid key={photo.id} item sm ={6} md={4} xl={3}>
                                     <Photo photo={photo}/>
                                 </Grid>
                             ))
