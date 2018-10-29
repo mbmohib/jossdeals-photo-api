@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import { withStyles } from '@material-ui/core/styles'
 import Search from './Search';
 import Hidden from '@material-ui/core/Hidden';
 import media from '../theme/mediaQuery';
@@ -55,7 +54,7 @@ const Header = props => (
             </StyledIconButton>
         </Hidden>
         
-        <Search />
+        <Search handleChange={props.handleChange}/>
     </HeaderWrapper>
 )
 

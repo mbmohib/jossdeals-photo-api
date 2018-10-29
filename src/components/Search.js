@@ -37,7 +37,6 @@ const SearchInput = styled.input`
         outline: none;
         background: #fff;
     }
-    
 `;
 
 const StyledIconButton = withStyles({
@@ -49,9 +48,9 @@ const StyledIconButton = withStyles({
 })(IconButton)
 
 
-const Search = () => (
+const Search = props => (
     <SearchWrapper>
-        <SearchInput type="text"/>
+        <SearchInput type="text" onChange={props.handleChange}/>
 
         <StyledIconButton
             aria-label="Menu"

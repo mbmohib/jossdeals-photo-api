@@ -17,13 +17,13 @@ const PhotoTitle = styled(Title)`
     padding: 5px;
     margin-left: 2%;
     border-radius: 5px;
-    background-color: #bacc9a;
+    background-color: rgba(186, 204, 154, 0.7);
 `;
 
 const Photo = props => (
     <PhotoWrapper>
-        <PhotoImage src="https://via.placeholder.com/460/24f355" alt=""/>
-        <PhotoTitle center size="small">accusamus beatae ad facilis cum similique qui sunt</PhotoTitle>
+        <PhotoImage src={props.photo.url} alt={props.photo.title}/>
+        <PhotoTitle center size="small">{props.photo.title}</PhotoTitle>
     </PhotoWrapper>
 )
 

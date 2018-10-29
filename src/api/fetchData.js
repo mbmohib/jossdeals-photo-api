@@ -5,7 +5,7 @@ export default async (url) => {
 
     try {
         const results = await axios.get(url)
-        console.log(results);
+        return results;
     } catch(error) {
         if (error.response) {
             // The request was made and the server responded with a status code

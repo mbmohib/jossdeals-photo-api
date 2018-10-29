@@ -38,7 +38,6 @@ const Content = props => (
             * Parmanently Hidden on devices smaller than 600px
             * Show/Hide by clicking on hambarger menu on devices larger than 600px
         */}
-
         <Hidden xsDown>
             <Slide
                 direction="right"
@@ -52,7 +51,7 @@ const Content = props => (
             </Slide>
         </Hidden>
 
-        <PhotoList />
+        <PhotoList searchValue={props.searchValue}/>
 
     </Wrapper>
 )
