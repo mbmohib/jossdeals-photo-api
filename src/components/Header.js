@@ -4,7 +4,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import { withStyles } from '@material-ui/core/styles'
 import Search from './Search';
-
+import Hidden from '@material-ui/core/Hidden';
 
 const HeaderWrapper = styled.header`
     display: flex;
@@ -22,14 +22,28 @@ const StyledIconButton = withStyles({
     }
 })(IconButton)
 
-const Header = () => (
+const Header = props => (
     <HeaderWrapper>
-        <StyledIconButton
-            color="primary"
-            aria-label="Menu"
-        >
-            <MenuIcon />
-        </StyledIconButton>
+
+        <Hidden xsDown>
+            <StyledIconButton
+                color="primary"
+                aria-label="Menu Button"
+                onClick={props.handleClick}
+            >
+                <MenuIcon />
+            </StyledIconButton>
+        </Hidden>
+
+        <Hidden smUp>
+            <StyledIconButton
+                color="primary"
+                aria-label="Mobile Menu Button"
+                onClick={props.handleMobileMenuClick}
+            >
+                <MenuIcon />
+            </StyledIconButton>
+        </Hidden>
         <Search />
     </HeaderWrapper>
 )
