@@ -47,18 +47,38 @@ const StyledIconButton = withStyles({
     }
 })(IconButton)
 
+class Search extends React.Component {
+    state = {
+        searchValue : ''
+    }
 
-const Search = props => (
-    <SearchWrapper>
-        <SearchInput type="text" onChange={props.handleChange}/>
+    handleChange = e => {
+        const searchValue = e.target.value;
 
-        <StyledIconButton
-            aria-label="Menu"
-        >
-            <SearchIcon />
-        </StyledIconButton>
+        this.setState(() => ({ searchValue }), () => {
+            this.props.handleChange(searchValue);
+        })
+    }
 
-    </SearchWrapper>
-)
+    render() {
+        return (
+            <SearchWrapper>
+                <SearchInput 
+                    type="text" 
+                    onChange={this.handleChange}
+                    value={this.state.searchValue}
+                />
+        
+                <StyledIconButton
+                    aria-label="Search Icon"
+                >
+                    <SearchIcon />
+                </StyledIconButton>
+        
+            </SearchWrapper>
+        )
+    }
+}
+
 
 export default Search;

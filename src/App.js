@@ -9,19 +9,34 @@ class App extends Component {
         mobileSidebarOpen: false,
         searchValue: ''
     }
-
+    /**
+     * Handle Sidebar Hide/Show for devices larger than 640px
+     *  
+     * @memberof App
+     */
     handleClick = () => {
         this.setState(prevState => ({ sidebarOpen: !prevState.sidebarOpen }))
     }
 
+    /**
+     * Handle Sidebar Hide/Show for devices smaller than 640px
+     *  
+     * @memberof App
+     */
     handleMobileMenuClick = () => {
         this.setState(prevState => ({
             mobileSidebarOpen: !prevState.mobileSidebarOpen
         }))
     }
 
-    handleChange = (e) => {
-        const value = e.target.value;
+    /**
+     * Recived search input value &
+     * store in the state
+     * 
+     * @memberof App
+     */
+    handleChange = (searchValue) => {
+        const value = searchValue;
 
         this.setState(() => ({ searchValue: value }))
     }

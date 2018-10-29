@@ -1,10 +1,10 @@
 import React from 'react';
-import fetchData from '../api/fetchData';
 import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
-import Photo from './Photo';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Fade from '@material-ui/core/Fade';
+import fetchData from '../api/fetchData';
+import Photo from './Photo';
 
 const PhotolistWrapper = styled.div`
     background: ${props => props.theme.primaryColor};
@@ -29,6 +29,7 @@ class PhotoList extends React.Component {
     }
     
     componentDidUpdate(prevProps) {
+        // Run searchPhoto function only when search value changed
         if (prevProps.searchValue !== this.props.searchValue) {
             this.searchPhotos()
         }
@@ -43,10 +44,16 @@ class PhotoList extends React.Component {
                 photos 
             }
         }, () => {
+            // Run searchPhoto function after recieved data (setState Completed)
             this.searchPhotos()
         });
     }
 
+    /**
+     *  Match photos from search input value &
+     *  store in another state property
+     * @memberof PhotoList
+     */
     searchPhotos() {
         const regex = new RegExp(this.props.searchValue, 'gi');
         const searchedPhotos = this.state.photos.filter( photo => {
@@ -59,6 +66,7 @@ class PhotoList extends React.Component {
     render() {
         return (
             <PhotolistWrapper>
+                {/* Show Loading state while data on the way */}
                 <Fade
                     in={!this.state.searchedPhotos}
                     unmountOnExit
